@@ -18,7 +18,10 @@ contract RebaseTokenTest is Test {
 
     function addRewardsToVault(uint256 amount) public {
         // send some rewards to the vault using the receive function
-        payable(address(vault)).call{value: amount}("");
+        (bool success, ) = payable(address(vault)).call{value: amount}("");
+        if (!success) {
+            revert();
+        }
     }
 
     function setUp() public {

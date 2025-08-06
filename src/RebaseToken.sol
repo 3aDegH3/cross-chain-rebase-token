@@ -207,8 +207,6 @@ contract RebaseToken is ERC20, Ownable, AccessControl {
         uint256 currentBalance = balanceOf(_user);
         uint256 balanceIncrease = currentBalance - previousPrincipalBalance;
 
-       
-
         _mint(_user, balanceIncrease);
         s_userLastUpdatedTimestamp[_user] = block.timestamp;
     }
@@ -216,7 +214,7 @@ contract RebaseToken is ERC20, Ownable, AccessControl {
     /**
      * @dev Calculates interest growth since last update
      */
-    
+
     function _calculateUserAccumulatedInterestSinceLastUpdate(
         address _user
     ) internal view returns (uint256 linearInterest) {
@@ -227,5 +225,4 @@ contract RebaseToken is ERC20, Ownable, AccessControl {
             PRECISION_FACTOR +
             (timeDifference * s_userInterestRate[_user]);
     }
-
 }

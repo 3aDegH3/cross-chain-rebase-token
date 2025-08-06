@@ -98,14 +98,5 @@ contract Vault is ReentrancyGuard {
         emit Redeem(msg.sender, _amount);
     }
 
-    /////////////////////
-    // Public View Functions
-    /////////////////////
-
-    /**
-     * @notice Returns the address of the RebaseToken contract
-     */
-    function getRebaseToken() public view returns (IRebaseToken) {
-        return i_rebaseToken;
-    }
+    
 }

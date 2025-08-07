@@ -2,11 +2,11 @@
 pragma solidity ^0.8.24;
 
 // Import Chainlink CCIP TokenPool base contract
-import {TokenPool} from "@ccip/src/v0.8/ccip/pools/TokenPool.sol";
+import {TokenPool} from "@ccip/contracts/src/v0.8/ccip/pools/TokenPool.sol";
 // Import Pool library (defines structs for LockOrBurn and ReleaseOrMint operations)
-import {Pool} from "@ccip/src/v0.8/ccip/libraries/Pool.sol";
+import {Pool} from "@ccip/contracts/src/v0.8/ccip/libraries/Pool.sol";
 // Import ERC20 interface
-import {IERC20} from "@ccip/src/v0.8/vendor/openzeppelin-solidity/v4.8.3/contracts/token/ERC20/IERC20.sol";
+import {IERC20} from "@ccip/contracts/src/v0.8/vendor/openzeppelin-solidity/v4.8.3/contracts/token/ERC20/IERC20.sol";
 // Import custom RebaseToken interface
 import {IRebaseToken} from "./interfaces/IRebaseToken.sol";
 

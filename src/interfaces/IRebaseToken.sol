@@ -33,4 +33,6 @@ interface IRebaseToken {
         address to,
         uint256 amount
     ) external returns (bool);
+
+    function grantMintAndBurnRole(address _address) external;
 }
